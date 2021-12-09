@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Outfit:wght@300&display=swap')
+
+body
+  font-family: 'Outfit', sans-serif
+  font-size: 1.8rem
+
+h1, h2, h3, h4
+  font-family: 'Big Shoulders Display', cursive
+  font-weight: 900
+  text-transform: uppercase
+  margin: 0
+
+h2
+  font-size: 5rem
+  line-height: 4.6rem
+  letter-spacing: .2px
+  margin-bottom: 2rem
+  @include media('large')
+    font-size: 6rem
+    line-height: 6rem
+    margin-bottom: 3.2rem
+
+h3
+  font-size: 2rem
+  line-height: 2rem
+  letter-spacing: .5px
+  @include media('large')
+    font-size: 3.2rem
+    line-height: 3rem
+
+p, li
+  color: $col-dark-gray
+  font-size: 1.8rem
+  line-height: 2.8rem
+  margin: 0
+  @include media('large')
+    font-size: 2.2rem
+    line-height: 3.2rem
+
+.btn
+  background-color: $col-darkest-gray
+  color: $col-white
+  display: flex
+  justify-content: center
+  align-items: center
+  font-family: 'Big Shoulders Display', cursive
+  font-size: 2rem
+  font-weight: 800
+  letter-spacing: 3.64px
+  text-transform: uppercase
+  position: relative
+  transition: $transition
+  height: 7.2rem
+  width: 20.3rem
+  &--cta
+    margin-top: 3.5rem
+    @include media('medium')
+      margin-top: 4.5rem
+    @include media('large')
+      margin-top: 6.4rem
+    &::after
+      background-image: url(~@/assets/images/icon-arrow-right.svg)
+      right: -5.6rem
+  &--back
+    margin-left: 5.6rem
+    &::after
+      background-image: url(~@/assets/images/icon-arrow-left.svg)
+      left: -5.6rem
+  &::after
+    background-color: $col-gold
+    background-repeat: no-repeat
+    background-position: center
+    content: ''
+    position: absolute
+    top: 0
+    transition: $transition
+    height: 100%
+    width: 5.6rem
+  &:hover
+    background-color: $col-gold
+    &::after
+      background-color: $col-darkest-gray
